@@ -1,113 +1,249 @@
+'use client'
 import Image from 'next/image'
 
+import profile from 'assets/images/profile.jpg'
+
+import javascript from 'assets/images/javascript.svg'
+import typescript from 'assets/images/typescript.svg'
+import node from 'assets/images/node.svg'
+import mongo from 'assets/images/mongo.svg'
+import postgres from 'assets/images/postgres.svg'
+import mysql from 'assets/images/mysql.svg'
+import aws from 'assets/images/aws.svg'
+import gcp from 'assets/images/gcp.svg'
+import react from 'assets/images/react.svg'
+
 export default function Home() {
+  const skills = [
+    {
+      src: javascript,
+      alt: 'JavaScript image'
+    },
+    {
+      src: typescript,
+      alt: 'TypeScript image'
+    },
+    {
+      src: node,
+      alt: 'NodeJs image'
+    },
+    {
+      src: mongo,
+      alt: 'MongoDB image'
+    },
+    {
+      src: postgres,
+      alt: 'PostgreSQL image'
+    },
+    {
+      src: mysql,
+      alt: 'MySQL image'
+    },
+    {
+      src: aws,
+      alt: 'AWS image'
+    },
+    {
+      src: gcp,
+      alt: 'GCP image'
+    },
+    {
+      src: react,
+      alt: 'ReactJs image'
+    }
+  ]
+
+  const aboutMe = `
+    Deenvolvedor desde 2016 com o foco em JavaScript, porém não preso às teacnologias, e sim em busca 
+    de soluções. Posso dizer que tenho um enclinamento maior para o lado do Back-End, porém tenho um 
+    bom conhecimento de tecnologias Front-End, como ReactJs e NextJs. Atualmente estou trabalhando 
+    para o Grupo GFT alocado no cliente BTG Pactual como desenvolvedor Back-End. No mais, posso 
+    dizer que amo programar, musculação e artes marciais. E além de dev sou Faixa Preta de Karatê 🥋.
+  `
+
+  const experiences = [
+    {
+      company: 'GFT - BTG Pactual',
+      role: 'Sênior Back-End Developer',
+      from: 'Julho de 2021',
+      to: 'Atual',
+      description: `Desenvolvedor no Grupo GFT alocado no cliente BTG. Desenvolvimento de APIs e serviços usando NodeJs
+        com JavaScript, PostgeSQL, MySQL, RabbitMQ, Serverless, AWS, entre outras tecnologias.
+      `
+    },
+    {
+      company: 'CBYK - New Space',
+      role: 'Full-Stack Developer',
+      from: 'Fevereiro de 2020',
+      to: 'Julho de 2021',
+      description: `Desenvolvedor no Grupo CBYK alocado no cliente New Space. Desenvolvimento de sistemas usando NodeJs com JavaScript
+        pelo lado do Back-End, MongoDB como Banco de Dados, e ReactJs pelo lado do Front-End.        
+      `
+    },
+    {
+      company: 'Workana',
+      role: 'On Demand Full-Stack Developer',
+      from: 'Julho de 2019',
+      to: 'Fevereiro de 2020',
+      description: `Desenvolvimento de aplicações usando majoritariamente JavaScript. Já tendo desenvolvido sistemas completos
+        usando NodeJs com ReactJs para sistemas Web, como ElectronJs para sistemas Desktop. Dentre eles, na parte de Banco de Dados, 
+        usando bancos relacionais como o PostgresSQL, como não relacionais, como o MongoDB.
+      `
+    },
+    {
+      company: 'SofTeam | Empresa Júnior de Computação',
+      role: 'Back-End Developer',
+      from: 'Julho de 2016',
+      to: 'Dezembro de 2019',
+      description: `Desenvolvimento de aplicações usando NodeJs com Javascript e MongoDB.
+      `
+    },
+  ]
+
+  const education = [
+    {
+      school: 'Universidade Tiradentes - UNIT',
+      course: 'Graduação em Análise e Desenvolvimento de Sistemas',
+      description: '',
+      from: '2016',
+      to: '2018'
+    },
+    {
+      school: 'Estácio - FASE',
+      course: 'Pós Graduação em Administração e Segurança de Sistemas Computacionais.',
+      description: 'Tema do TCC: Infraestrutura como Código com o uso do Docker.',
+      from: '2015',
+      to: '2017'
+    },
+    {
+      school: 'Universidade Tiradentes - UNIT',
+      course: 'Informática Licenciatura',
+      description: '',
+      from: '2012',
+      to: '2015'
+    },
+  ]
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
+    <div className="relative text-gray-800 mb-16">
+        <section className="flex flex-col items-center justify-center h-screen  -my-20 md:-mt-48 px-8">
+            <div className="flex flex-col items-center justify-center text-center h-screen-half">
+                <Image 
+                  className="md:hidden object-cover w-15 h-40 rounded-full mb-5 ring-2 ring-gray-500/50 ring-offset-[10px]"
+                  src={profile} 
+                  alt="Foto do Perfil"
+                  width={1000}
+                  height={1000}
+                />
+                <h1 className="text-5xl sm:text-6xl lg:text-9xl">
+                    Jefferson
+                </h1>
+                <h2 className="font-light text-4xl sm:text-5xl lg:text-8xl">
+                    Web Developer
+                </h2>
+            </div>
+        </section>
+        <section className="flex items-center justify-between px-8 mb-20 tracking-wider">
+            <div className="flex flex-col w-full md:w-1/3 space-y-12 text-center md:text-left">
+                <div className="flex flex-col px-10 md:px-20">
+                    <h3 className="text-xl font-bold">Skills</h3>
+                    <span className="text-lg">
+                      {
+                        skills.map(skill => 
+                          <Image 
+                            className='mb-2'
+                            key={skill.alt}
+                            src={skill.src}
+                            alt={skill.alt}
+                            width={100}
+                            height={100}
+                          />  
+                        )
+                      }
+                    </span>
+                </div>
+                <div className="px-10 md:px-20">
+                    <h3 className="text-xl font-bold">
+                      Sobre Mim
+                    </h3>
+                    <p className="w-full md:w-2/3">
+                      { aboutMe }
+                    </p>
+                </div>
+                <div className="px-10 md:px-20">
+                    <h3 className="text-xl font-bold">Contato</h3>
+                    <a className="text-xl hover:text-blue-600" href="mailto:jf.nts10@gmail.com">jf.tns10@gmail.com</a>
+                </div>
+            </div>
+            <Image 
+              className="hidden md:block object-cover w-1/4 h-screen rounded-full ring-2 ring-gray-500/50 ring-offset-[30px]"
+              src={profile} 
+              alt="Foto do Perfil"
+              width={1000}
+              height={1000}
             />
-          </a>
-        </div>
+            <div className="hidden md:flex flex-col w-1/3 space-y-12 text-right">
+                <div className="px-20">
+                    <h4 className="text-xl font-bold">Experiência</h4>
+                    <p className="text-6xl">
+                      +{ new Date().getFullYear() - 2016 } 
+                    </p>
+                </div>
+            </div>
+        </section>
+        <hr className="border-gray-400 mx-44" />
+        <section className="px-20 mt-10">
+            <h4 className="mb-8 text-3xl font-bold text-center md:text-left">
+              Experiência
+            </h4>
+            {
+              experiences.map(experience => (
+                <div key={experience.company} className="grid grid-cols-1 md:grid-cols-6 my-10">
+                  <div className="flex flex-col col-span-2 mb-4 md:mb-0">
+                        <h5 className="text-xl md:text-2xl font-bold">
+                          { experience.role }
+                        </h5>
+                        <h6 className="text-lg font-bold">
+                          { experience.company }
+                        </h6>
+                        <p>{ experience.from } - {experience.to}</p>
+                    </div>
+                    <div className="flex flex-col col-span-4">
+                        <p>
+                          { experience.description }
+                        </p>
+                    </div>
+                </div>
+              ))
+            }          
+        </section>
+        <hr className="border-gray-400 mx-44" />
+        <section className="px-20 mt-10">
+            <h4 className="mb-8 text-3xl font-bold text-center md:text-left">
+                Educação
+            </h4>
+            {
+              education.map(education => (
+                <div className="grid grid-cols-1 md:grid-cols-6 my-10">
+                  <div className="flex flex-col col-span-2 mb-4 md:mb-0">
+                      <h5 className="text-xl md:text-2xl  font-bold">
+                        { education.course }
+                      </h5>
+                      <h6 className="text-lg font-bold">
+                        { education.school }
+                      </h6>
+                      <p>
+                        { education.from } - { education.to }
+                      </p>
+                  </div>
+                  <div className="flex flex-col col-span-4 ">
+                      <p>
+                        { education.description }
+                      </p>
+                  </div>
+              </div>
+              ))
+            }
+        </section>
       </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
   )
 }
