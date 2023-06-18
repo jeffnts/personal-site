@@ -223,7 +223,10 @@ export default function Home() {
             </h4>
             {
               education.map(education => (
-                <div className="grid grid-cols-1 md:grid-cols-6 my-10">
+                <div 
+                  key={education.course}
+                  className="grid grid-cols-1 md:grid-cols-6 my-10"
+                >
                   <div className="flex flex-col col-span-2 mb-4 md:mb-0">
                       <h5 className="text-xl md:text-2xl  font-bold">
                         { education.course }
