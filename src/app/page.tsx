@@ -55,9 +55,9 @@ export default function Home() {
 
   const aboutMe = `
     Deenvolvedor desde 2016 com o foco em JavaScript, porém não preso às teacnologias, e sim em busca 
-    de soluções. Posso dizer que tenho um enclinamento maior para o lado do Back-End, porém tenho um 
+    de soluções. Posso dizer que tenho uma preferência maior para o lado do Back-End, porém tenho um 
     bom conhecimento de tecnologias Front-End, como ReactJs e NextJs. Atualmente estou trabalhando 
-    para o Grupo GFT alocado no cliente BTG Pactual como desenvolvedor Back-End. No mais, posso 
+    para o Grupo GFT, alocado no cliente BTG Pactual como desenvolvedor Back-End. No mais, posso 
     dizer que amo programar, musculação e artes marciais. E além de dev sou Faixa Preta de Karatê 🥋.
   `
 
@@ -67,7 +67,7 @@ export default function Home() {
       role: 'Sênior Back-End Developer',
       from: 'Julho de 2021',
       to: 'Atual',
-      description: `Desenvolvedor no Grupo GFT alocado no cliente BTG. Desenvolvimento de APIs e serviços usando NodeJs
+      description: `Desenvolvedor no Grupo GFT, alocado no cliente BTG. Desenvolvimento de APIs e serviços usando NodeJs
         com JavaScript, PostgeSQL, MySQL, RabbitMQ, Serverless, AWS, entre outras tecnologias.
       `
     },
@@ -76,7 +76,7 @@ export default function Home() {
       role: 'Full-Stack Developer',
       from: 'Fevereiro de 2020',
       to: 'Julho de 2021',
-      description: `Desenvolvedor no Grupo CBYK alocado no cliente New Space. Desenvolvimento de sistemas usando NodeJs com JavaScript
+      description: `Desenvolvedor no Grupo CBYK, alocado no cliente New Space. Desenvolvimento de sistemas usando NodeJs com JavaScript
         pelo lado do Back-End, MongoDB como Banco de Dados, e ReactJs pelo lado do Front-End.        
       `
     },
@@ -86,7 +86,7 @@ export default function Home() {
       from: 'Julho de 2019',
       to: 'Fevereiro de 2020',
       description: `Desenvolvimento de aplicações usando majoritariamente JavaScript. Já tendo desenvolvido sistemas completos
-        usando NodeJs com ReactJs para sistemas Web, como ElectronJs para sistemas Desktop. Dentre eles, na parte de Banco de Dados, 
+        usando NodeJs com ReactJs para sistemas Web, e ElectronJs para sistemas Desktop. Dentre eles, na parte de Banco de Dados, 
         usando bancos relacionais como o PostgresSQL, como não relacionais, como o MongoDB.
       `
     },
@@ -95,7 +95,7 @@ export default function Home() {
       role: 'Back-End Developer',
       from: 'Julho de 2016',
       to: 'Dezembro de 2019',
-      description: `Desenvolvimento de aplicações usando NodeJs com Javascript e MongoDB.
+      description: `Desenvolvimento de aplicações usando NodeJs com JavaScript e MongoDB.
       `
     },
   ]
