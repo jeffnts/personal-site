@@ -54,7 +54,7 @@ export default function Home() {
   ]
 
   const aboutMe = `
-    Deenvolvedor desde 2016 com o foco em JavaScript, porém não preso às tecnologias, e sim em busca 
+    Desenvolvedor desde 2016 com o foco em JavaScript, porém não preso às tecnologias, e sim em busca 
     de soluções. Posso dizer que tenho uma maior inclinação para o lado do Back-End, porém tenho um 
     bom conhecimento de tecnologias Front-End, como ReactJs e NextJs. Atualmente estou trabalhando 
     para o Grupo GFT, alocado no cliente BTG Pactual como desenvolvedor Back-End. No mais, posso 
